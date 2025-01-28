@@ -2,92 +2,57 @@ export const slides = [
   {
     title: "Introduction",
     body: `
-DeepSeek AI, a Chinese startup founded in 2023, has recently disrupted the global AI industry with its groundbreaking innovations. The company has developed advanced AI models that rival or surpass those of established players like OpenAI, but at a fraction of the cost. This presentation will explore DeepSeek's innovations, their impact on the AI industry, and the implications for the future of AI development.
+Imagine a small startup challenging the biggest players in the AI world—and winning. DeepSeek AI, founded in 2023, is doing just that. With groundbreaking technology and bold strategies, this Chinese company has created advanced AI models that are just as powerful as giants like OpenAI, but for a fraction of the cost. Today, we'll explore what makes DeepSeek special and why the whole world is talking about it.
     `,
   },
   {
-    title: "Background and Founding",
+    title: "The Smart Moves That Started It All",
     body: `
-- Founded in July 2023 by Liang Wenfeng, a graduate of Zhejiang University
-- Funded by Liang's hedge fund, High-Flyer, with assets estimated at $8 billion
-- Started as an artificial general intelligence (AGI) research lab in April 2023, becoming its own company in May 2023
-- Liang's foresight: Stockpiled Nvidia A100 chips before US export restrictions, providing a crucial advantage
+- **Foresight:** DeepSeek's founder, Liang Wenfeng, saw the potential impact of U.S. restrictions on AI hardware and acted early. He bought critical Nvidia chips before they were banned, giving the company a massive advantage.
+- **Backing:** Liang's hedge fund, High-Flyer, funded the company with billions, letting them innovate quickly without worrying about resources.
     `,
   },
   {
-    title: "DeepSeek's Innovations: DeepSeek-V3 Model",
+    title: "What Makes DeepSeek-V3 So Impressive?",
     body: `
-- 671B parameter model developed for less than $6 million
-- Uses significantly less data and cheaper chips compared to competitors
-- Activates only 37 billion parameters (5.5%) during actual tasks, ensuring efficiency
+- **Efficient and Smart:** DeepSeek built a huge AI model (671 billion parameters) for less than $6 million. Most competitors would spend 10 times that!
+- **Selective Power:** Instead of using all its resources for every task, the model only activates the parts it needs, making it faster and cheaper to run.
     `,
   },
   {
-    title: "DeepSeek's Innovations: Architectural Breakthroughs",
+    title: "Innovations Behind the Magic",
     body: `
-1. Mixture-of-Experts (MoE) Architecture
-   - Divides the model into specialized subnetworks ("experts")
-   - Dynamic routing: Selects 8 out of 256 routing experts per layer
-   - Balances shared and routed experts for general knowledge and specialization
-
-2. Multi-Head Latent Attention (MLA)
-   - Compresses key-value vectors to 1/16th their original size
-   - Reduces memory usage and accelerates inference
-   - Enables efficient caching for faster token generation
-
-3. Multi-Token Prediction (MTP)
-   - Predicts multiple tokens sequentially during training
-   - Improves accuracy on long-context tasks
-   - Enables parallel token prediction during inference
-
-4. FP8 Mixed Precision Training
-   - Uses 8-bit floating-point precision
-   - Halves memory consumption compared to FP16
-   - Achieves training cost of $5.576 million, 10x cheaper than comparable models
+- **Mixture-of-Experts (MoE):** Think of it as a team of specialists working on specific problems. The model picks the right expert for the job, so it’s smarter and faster.
+- **Multi-Token Prediction:** Instead of solving one word at a time, it predicts chunks of words, speeding up how quickly it works.
+- **Cost-Saving Tech:** By using smarter techniques like 8-bit computing, DeepSeek slashed training costs and energy use.
     `,
   },
   {
-    title: "Impact on the AI Industry",
+    title: "Why This Matters for the Industry",
     body: `
-- Triggered a global tech selloff, risking $1 trillion in market capitalization
-- Challenges the assumption that AI development requires massive resources
-- Offers significantly lower API pricing, up to 95% less than competitors like OpenAI
-- Sparked an AI model price war in China, forcing major tech giants to cut prices
-- Dubbed the "Pinduoduo of AI" for its disruptive pricing strategy
+- **Shaking Up Big Tech:** DeepSeek’s success caused a global ripple. Big companies lost billions in stock value because this small startup proved that AI doesn’t have to cost a fortune.
+- **Cheaper AI for All:** DeepSeek offers its services at prices up to 95% lower than its competitors. This could make advanced AI tools accessible to startups, researchers, and even smaller countries.
     `,
   },
   {
-    title: "Open-Source Approach",
+    title: "Going Open Source: Sharing the Innovation",
     body: `
-- Most DeepSeek models are open-source, promoting accessibility and innovation
-- Aligns with the broader trend of open-sourcing in AI development
-- Enables wider adoption and adaptation of AI technologies
-- Focus on pure research without immediate commercialization plans
+- **What It Means:** DeepSeek has made many of its AI models open-source, meaning anyone can use or adapt them for free.
+- **Why It’s a Big Deal:** Open-source AI can help more people and organizations innovate, leveling the playing field and driving progress faster than ever.
     `,
   },
   {
-    title: "Performance and Capabilities",
+    title: "Looking Ahead: The Big Picture",
     body: `
-- Matches or outperforms OpenAI's models on several math and reasoning metrics
-- Supports context lengths of up to 128K tokens, ideal for complex tasks
-- Excels in code generation, data analysis, and complex problem-solving
-- DeepSeek-V2-Lite: 15.7B total parameters, 2.4B activated for each token
-    `,
-  },
-  {
-    title: "Implications for the Future",
-    body: `
-- Potential to democratize AI development and application globally
-- May accelerate AI innovation and reshape the competitive landscape
-- Challenges US tech supremacy in AI, despite sanctions on advanced semiconductors
-- Raises questions about the valuation of AI-focused tech stocks
+- **Democratizing AI:** By making AI affordable and accessible, DeepSeek is breaking down barriers, allowing more people to create amazing things.
+- **Global Competition:** This could reshape the balance of power in AI, with new players emerging from unexpected places.
+- **New Questions:** How will this change the value of tech companies? Will it lead to even faster advancements? The world is watching.
     `,
   },
   {
     title: "Conclusion",
     body: `
-DeepSeek represents a significant shift in AI development, emphasizing efficiency, openness, and innovation. Its success challenges established norms and could lead to more accessible and powerful AI solutions worldwide. As the "Sputnik moment" for AI, DeepSeek's rise signals a new era of global competition and collaboration in artificial intelligence.
+DeepSeek AI is more than just a new company—it’s a movement. By proving that powerful AI can be efficient, affordable, and open, it’s inspiring the next wave of innovation. DeepSeek is showing us that the future of AI isn’t just for the biggest players—it’s for everyone.
     `,
   },
-]
-
+];
