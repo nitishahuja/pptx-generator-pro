@@ -26,13 +26,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-4 md:p-24 bg-gradient-to-br from-blue-100 to-purple-100">
       <div className="w-full max-w-4xl mx-auto">
         <div className="mb-8 text-center flex flex-col items-center">
-          <Image
-            src="/placeholder.svg?height=100&width=100"
-            alt="DeepSeek AI Logo"
-            width={100}
-            height={100}
-            className="mb-4"
-          />
           <h1 className="text-4xl font-bold text-blue-800">
             DeepSeek AI: Open-Source AI Revolution
           </h1>
