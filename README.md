@@ -141,4 +141,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ### Author
 
-Created by **[Your Name](https://github.com/yourusername)** – feel free to reach out for feedback or collaboration!
+Created by **[Nitish Ahuja](https://github.com/nitishahuja)** – feel free to reach out for feedback or collaboration!
