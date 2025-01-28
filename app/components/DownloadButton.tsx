@@ -25,54 +25,87 @@ export default function DownloadButton({ slides }: DownloadButtonProps) {
       // Set slide layout
       pptx.layout = "LAYOUT_16x9";
 
-      // Define colors
-      const BLUE = "4A90E2";
-      const PURPLE = "9B51E0";
+      // Define colors and styles
+      const TITLE_COLOR = "4A90E2";
+      const BODY_COLOR = "363636";
+      const FOOTER_COLOR = "FFFFFF";
+      const FOOTER_BACKGROUND = "9B51E0";
 
       // Loop through slides and add content
       slides.forEach((slide, index) => {
         const pptSlide = pptx.addSlide();
 
-        // Add title
+        // Add slide title
         pptSlide.addText(slide.title, {
           x: 0.5,
           y: 0.5,
           w: "90%",
-          fontSize: 24,
-          color: BLUE,
+          fontSize: 32,
+          color: TITLE_COLOR,
           bold: true,
           align: "center",
         });
 
-        // Add body content
-        pptSlide.addText(slide.body, {
-          x: 0.5,
-          y: 1.5,
-          w: "90%",
-          h: "70%",
-          fontSize: 14,
-          color: "363636",
-          align: "left",
-          lineSpacing: 20,
+        // Parse and add body content
+        const bodyLines = slide.body
+          .split("\n")
+          .filter((line) => line.trim() !== "");
+        let currentY = 1.5; // Start below the title
+
+        bodyLines.forEach((line) => {
+          if (line.startsWith("- **")) {
+            // Add bold bullet points
+            pptSlide.addText(line.substring(2), {
+              x: 1,
+              y: currentY,
+              w: "88%",
+              fontSize: 20,
+              color: BODY_COLOR,
+              bold: true,
+              bullet: true,
+              lineSpacing: 24,
+            });
+          } else if (line.startsWith("- ")) {
+            // Add regular bullet points
+            pptSlide.addText(line.substring(2), {
+              x: 1,
+              y: currentY,
+              w: "88%",
+              fontSize: 20,
+              color: BODY_COLOR,
+              bullet: true,
+              lineSpacing: 24,
+            });
+          } else {
+            // Add regular paragraphs
+            pptSlide.addText(line, {
+              x: 0.5,
+              y: currentY,
+              w: "90%",
+              fontSize: 20,
+              color: BODY_COLOR,
+              lineSpacing: 30,
+            });
+          }
+          currentY += 0.7; // Add spacing between lines
         });
 
         // Add footer with slide number
-        pptSlide.addText(`Slide ${index + 1} of ${slides.length}`, {
-          x: 0,
-          y: "95%",
-          w: "100%",
-          fontSize: 10,
-          color: "FFFFFF",
-          align: "center",
-        });
-
-        // Add a footer background for style
         pptSlide.addShape(pptx.ShapeType.rect, {
           x: 0,
           y: "90%",
           w: "100%",
           h: "10%",
-          fill: { color: PURPLE },
+          fill: { color: FOOTER_BACKGROUND },
+        });
+
+        pptSlide.addText(`Slide ${index + 1} of ${slides.length}`, {
+          x: 0,
+          y: "92%",
+          w: "100%",
+          fontSize: 12,
+          color: FOOTER_COLOR,
+          align: "center",
         });
       });
 

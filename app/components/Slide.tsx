@@ -11,16 +11,16 @@ interface SlideProps {
 
 export default function Slide({ content, isFullScreen = false }: SlideProps) {
   const containerClasses = isFullScreen
-    ? "p-16 h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-purple-100"
-    : "p-12 h-full flex flex-col";
+    ? "p-26 h-[800px] flex flex-col justify-center items-center bg-gradient-to-br from-blue-100 to-purple-100 text-3xl"
+    : "p-12 h-[400px] flex flex-col text-xl";
 
   const titleClasses = isFullScreen
-    ? "text-6xl font-bold text-blue-800 mb-12"
-    : "text-4xl font-bold text-blue-800 mb-8";
+    ? "text-6xl font-bold text-blue-2200"
+    : "text-4xl font-bold text-blue-1200";
 
   const contentClasses = isFullScreen
-    ? "prose prose-2xl max-w-5xl w-full text-gray-800 overflow-y-auto max-h-[75vh] leading-relaxed"
-    : "prose prose-xl max-w-4xl text-gray-700 flex-grow leading-relaxed";
+    ? "prose prose-2xl max-w-6xl w-full text-gray-1800 overflow-y-auto max-h-[75vh] leading-loose"
+    : "prose prose-2xl max-w-5xl text-gray-1000 flex-grow leading-relaxed";
 
   return (
     <div className={containerClasses}>
@@ -28,10 +28,10 @@ export default function Slide({ content, isFullScreen = false }: SlideProps) {
         <div className="flex items-center mb-8">
           <Cpu
             className={`${
-              isFullScreen ? "w-16 h-16" : "w-10 h-10"
+              isFullScreen ? "w-20 h-20" : "w-12 h-12"
             } text-blue-600 mr-4 flex-shrink-0`}
           />
-          <h2 className={titleClasses}>{content.title}</h2>
+          <h1 className={titleClasses}>{content.title}</h1>
         </div>
         <div className={contentClasses}>
           <ReactMarkdown
